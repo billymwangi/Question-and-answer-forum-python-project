@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+        <script src="../static/bootstrap/js/jquery-3.4.0.js"></script>
+        <script src="../static/bootstrap/js/popper.min.js"></script>
+        <script src="../static/bootstrap/css/bootstrap.css"></script>
+        <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.css">
+</head>
+<body>
+ <section>
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <h1 class="text-info text-center">Login here</h1>
+                {% for message in get_flashed_messages() %}
+                <p class="text-success text-center">{{ message }}</p>
+                {% endfor %}
+                <form method="post">
+                    <input class="form-control" name="u_email" placeholder="Enter email" type="email"><br>
+                    <input class="form-control" name="u_pass" placeholder="Enter pwd" type="password"><br>
+                    <input class="btn btn-outline-info" name="btn_login" value="Login" type="submit">
+                    <a class="btn btn-link" href="/">Have no account? Register</a>
+
+                </form>
+            </div>
+            <div class="col-3"></div>
+        </div>
+    </section>
+</body>
+</html>
